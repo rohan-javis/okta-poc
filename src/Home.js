@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import { withOktaAuth } from "@okta/okta-react";
 import { useOktaAuth } from "@okta/okta-react";
 

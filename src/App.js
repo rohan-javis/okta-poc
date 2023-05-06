@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
-import { LoginCallback, Security, SecureRoute } from "@okta/okta-react";
+import { LoginCallback, Security } from "@okta/okta-react";
 import Home from "./Home";
 import Profile from "./Profile";
 
