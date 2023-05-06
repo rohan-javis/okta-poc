@@ -8,7 +8,7 @@ import Profile from "./Profile";
 const oktaAuth = new OktaAuth({
   issuer: "https://dev-29466123.okta.com/oauth2/default",
   clientId: "0oa9f61s865239evm5d7",
-  redirectUri: window.location.origin + "/login/callback",
+  redirectUri: "https://playful-begonia-4c2ee9.netlify.app/login/callback",
 });
 
 class App extends Component {
