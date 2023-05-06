@@ -6,10 +6,12 @@ export default withOktaAuth(() => {
   const { authState, oktaAuth } = useOktaAuth();
   const login = async () => {
     await oktaAuth.signInWithRedirect();
+    // window.location.reload()
   };
 
   const logout = async () => {
     await oktaAuth.signOut();
+    window.location.reload();
   };
 
   let body = null;
@@ -17,7 +19,7 @@ export default withOktaAuth(() => {
     body = (
       <div className="Buttons">
         <h3>Woho! you're now logged in as {authState.idToken.claims.email}</h3>
-        <button onClick={() => logout()}>Logout</button>
+        <button onClick={logout}>Logout</button>
         {/* Replace me with your root component. */}
       </div>
     );
@@ -25,7 +27,7 @@ export default withOktaAuth(() => {
     body = (
       <div className="Buttons">
         <h3>Not Authenticated</h3>
-        <button onClick={() => login()}>Login via Okta</button>
+        <button onClick={login}>Login via Okta</button>
       </div>
     );
   }
